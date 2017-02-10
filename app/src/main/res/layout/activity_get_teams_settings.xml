@@ -18,11 +18,20 @@
         android:textSize="15sp"
         android:textAlignment="center"/>
 
+    <!--
     <TextView
         android:id="@+id/team_list_view"
         android:layout_below="@id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>
+    -->
+
+    <ListView
+        android:id="@+id/team_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </RelativeLayout>

@@ -1,9 +1,13 @@
 package org.robochargers.velocity.vortex.settings;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.TextView;
-
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import org.robochargers.velocity.vortex.rw.ReadWrite;
 import org.robochargers.velocity.vortex.scouting.R;
@@ -24,13 +28,23 @@ public class GetTeamsSettingsActivity extends Activity {
     protected void onStart() {
         super.onStart();
 
-        ArrayList<String> list = ReadWrite.readFromFile(Variables.TEAM_LIST_FILE_NAME, getBaseContext());
+        final ArrayList<String> list = ReadWrite.readFromFile(Variables.TEAM_LIST_FILE_NAME, getBaseContext());
         String finalList = "";
         for (int c = 0; c < list.size(); c++) {
             finalList = finalList + list.get(c) + "\n";
         }
 
-        TextView teamView = (TextView) findViewById(R.id.team_list_view);
-        teamView.setText(finalList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_view, list);
+        ListView view = (ListView) findViewById(R.id.team_list);
+        view.setAdapter(adapter);
+        view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Variables.TEAM_DATA_NAME = list.get(position);
+                Intent intent = new Intent(getBaseContext(), EnterDataTeamsSettingsActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }

@@ -45,9 +45,6 @@ public class MainActivity extends Activity implements PopupMenu.OnMenuItemClickL
                 intent = new Intent(this, GetTeamsSettingsActivity.class);
                 startActivity(intent);
                 return true;
-            case R.id.set_prematch_data:
-
-                return true;
             case R.id.about:
                 return true;
             case R.id.delete:

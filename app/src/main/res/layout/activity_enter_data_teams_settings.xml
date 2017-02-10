@@ -11,6 +11,7 @@
     tools:context="org.robochargers.velocity.vortex.settings.EnterDataTeamsSettingsActivity">
 
     <TextView
+        android:id="@+id/team_name_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

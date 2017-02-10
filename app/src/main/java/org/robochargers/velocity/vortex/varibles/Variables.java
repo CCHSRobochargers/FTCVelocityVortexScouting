@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Variables {
     public static final String TEAM_LIST_FILE_NAME = "list.txt";
-    public static String TEAM_LIST_FILE_CONTENTS = "";
     public static ArrayList<String> TEAM_LIST = new ArrayList<>();
 
+    public static String TEAM_DATA_NAME = "";
 }
