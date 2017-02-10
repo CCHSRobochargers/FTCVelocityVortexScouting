@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FTC Velocity Vortex Scouting</string>
+
+    <string name="team_data">Team Data</string>
+    <string name="team_list">Team List</string>
+    <string name="team_data_entry">Enter Team Data</string>
+
+    <string name="about">About</string>
+    <string name="clear_file">Clear File?</string>
+
+    <string name="settings_add_teams">Add Teams</string>
+    <string name="settings_add_team_number">Type team number</string>
+    <string name="settings_add_team_name">Type team name</string>
+    <string name="settings_get_teams">Get Team List</string>
+    <string name="settings_go_back">Back</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_save">Save</string>
+</resources>

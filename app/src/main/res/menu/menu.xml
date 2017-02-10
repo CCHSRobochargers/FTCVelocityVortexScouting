@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/team_data">
+        <menu>
+            <item
+                android:id="@+id/add_teams"
+                android:title="@string/settings_add_teams" />
+            <item
+                android:id="@+id/get_teams"
+                android:title="@string/settings_get_teams" />
+            <item
+                android:id="@+id/set_prematch_data"
+                android:title="@string/team_data_entry"/>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"/>
+
+    <item
+        android:id="@+id/delete"
+        android:title="@string/clear_file"/>
+</menu>
